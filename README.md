@@ -33,7 +33,7 @@ AWS Management Console -> IAM -> Policy -> Create Policy -> paste above -> Revie
 
 - attach the newly created terraform user policy to a IAM user or EC2 role.
 
-    AWS Management Console -> IAM -> Users -> User Name: terraformuser -> Programmatic Access -> Attach existing Policy Search for: TerraformUserPolicy -> Tag Name:TFPolicy
+AWS Management Console -> IAM -> Users -> User Name: terraformuser -> Programmatic Access -> Attach existing Policy Search for: TerraformUserPolicy -> Tag Name:TFPolicy
 
 ```
 ```
