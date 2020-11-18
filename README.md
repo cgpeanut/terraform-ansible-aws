@@ -182,6 +182,15 @@ Note: checkout .terraform for state and plugins
 
 Step 6: Deploy Network Layout 
 
+## Design
+
+The idea of this project is to make easy deployment of our infrastructure using the concept of Infrastructure as a Code.For this purpose,I have used 2 tier architecture setup consisting of two different tools, Terraform and Ansible.Terraform is used in order to provision the required instances on Cloud.Whereas, ansible is used to configure our application.
+
+![arch2](https://user-images.githubusercontent.com/8342133/28283464-6c37d870-6b4b-11e7-9cf0-ac46aed9c594.png)
+
+
+
+
 Note: must have S3 bucket and multuple providers set. 
 
 - Network Set Up part 1: Deploying VPCs, Internet GWs, and Subnets
