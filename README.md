@@ -269,13 +269,17 @@ resource "aws_subnet" "subnet_1_oregon" {
 ##### end of networks.tf #####
 
 ```
+# Network Set Up part 2: Deploying Multi-Region VPC Peering
+
+```
 ```
 
 
 
 
 
-- Network Set Up part 2: Deploying Multi-Region VPC Peering
+
+
 - Network Set Up part 3: Deploying Security Groups
 
 Hand-On -> Creating a multi-region network with VPC peering using SGs, IGW and RTs
