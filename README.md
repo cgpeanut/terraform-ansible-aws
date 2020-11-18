@@ -74,7 +74,9 @@ $ terraform plan
 
 $ terraform apply
 
-1. 
+1. Deploy the execution plan!
+2. By default will prompt before deploying
+3. Will display execution plan again
 
 
 
