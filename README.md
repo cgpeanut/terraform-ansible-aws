@@ -466,6 +466,8 @@ resource "aws_security_group" "jenkins-sg-oregon" {
 
 ##### end of security_groups.tf #####
 
+```
+$ vim variables.tf
 
 
 
