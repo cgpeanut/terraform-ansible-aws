@@ -361,6 +361,13 @@ To validate: AWS Management Console -> VPC -> useast1 region (nVa) -> Peering Co
 
 # Network Set Up part 3: Deploying Security Groups
 
+[<img src="https://github.com/cgpeanut/terraform-ansible-aws/blob/main/images/deploy-security-groups.png">]
+
+
+
+
+
+
 Hand-On -> Creating a multi-region network with VPC peering using SGs, IGW and RTs
 
 - App VM Deployment part 1: Using Data Source (SSM Parameter Store) to fetch AMI IDs
