@@ -494,13 +494,23 @@ Objective:
   - Clone the GitHub Repo for Terraform Code
   - Deploy the Terraform Code
 
-It can get cumbersome trying to track all the different routing components of a network, especially in the fast-moving, dynamic IT operations world today. By maintaining your AWS resources such as VPC, SGs, and IGWs using Terraform, you can track all of the changes as code.
+It can get cumbersome trying to track all the different routing components of a network,
+especially in the fast-moving, dynamic IT operations world today. By maintaining your AWS
+resources such as VPC, SGs, and IGWs using Terraform, you can track all of the changes as
+code.
 
-Let's go through creating a network setup complete with VPCs, subnets, security groups, internet gateways, and VPC peering in AWS using Terraform. We are expected to have working knowledge of VPC resources and basic network components within AWS.
+Let's go through creating a network setup complete with VPCs, subnets, security groups,
+internet gateways, and VPC peering in AWS using Terraform. We are expected to have working
+knowledge of VPC resources and basic network components within AWS.
 
 ```
 
 [<img src="https://github.com/cgpeanut/terraform-ansible-aws/blob/main/images/vpc-peering.png">
+
+1. login to EC2 instance control node
+
+$ terraform --version
+$ git clone http://
 
 
 
