@@ -785,6 +785,51 @@ resource "aws_security_group" "jenkins-sg-oregon" {
 ```
 ```
 
+##### start of outputs.tf #####
+
+output "VPC-ID-US-EAST-1" {
+  value = aws_vpc.vpc_useast.id
+}
+
+output "VPC-ID-US-WEST-2" {
+  value = aws_vpc.vpc_uswest.id
+}
+
+output "PEERING-CONNECTION-ID" {
+  value = aws_vpc_peering_connection.useast1-uswest-2.id
+}
+
+```
+```
+
+##### start of variables.tf #####
+
+variable "external_ip" {
+  type    = string
+  default = "0.0.0.0/0"
+}
+
+variable "profile" {
+  type    = string
+  default = "default"
+}
+
+variable "region-master" {
+  type    = string
+  default = "us-east-1"
+}
+
+variable "region-worker" {
+  type    = string
+  default = "us-west-2"
+}
+
+##### end of variables.tf #####
+
+
+
+
+
 
 
 
