@@ -285,9 +285,9 @@ $ vim networks.t
 #Initiate Peering connection request from us-east-1
 resource "aws_vpc_peering_connection" "useast1-uswest2" {
   provider    = aws.region-master
-  peer_vpc_id = aws_vpc.vpc_master_oregon.id
-  vpc_id      = aws_vpc.vpc_master.id
-  peer_region = var.region-worker
+  peer_vpc_id = aws_vpc.vpc_master_oregon.id # spun-up vpc in uswest2
+  vpc_id      = aws_vpc.vpc_master.id        # originating vpc useast1
+  peer_region = var.region-worker 
 
 }
 
@@ -307,7 +307,7 @@ resource "aws_route_table" "internet_route" {
     gateway_id = aws_internet_gateway.igw.id
   }
   route {
-    cidr_block                = "192.168.1.0/24"
+    cidr_block                = "192.168.1.0/24" # so incooming packets 192. to useast1
     vpc_peering_connection_id = aws_vpc_peering_connection.useast1-uswest2.id
   }
   lifecycle {
@@ -355,6 +355,10 @@ resource "aws_main_route_table_association" "set-worker-default-rt-assoc" {
 ##### continue building from the previous networks.tf file ####
 
 ```
+To validate: AWS Management Console -> VPC -> useast1 region (nVa) -> Peering Connections
+
+[<img src="https://github.com/cgpeanut/terraform-ansible-aws/blob/main/images/useast1-peering-connection.png">]
+
 
 
 
