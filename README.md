@@ -1,21 +1,26 @@
 ```
-Deploy terraform and ansible in AWS guide - roroxas
+Deploy terraform and ansible in AWS Guide - roroxas
 
 Step 1: Setup the Environment:
-- Install terraform 
+- Install terraform in a control node unzip in /usr/local/bin
 
-- Set Up AWS CLI and Ansible
+$ wget -c https://releases.hashicorp.com/terraform/0.12.28/terraform_0.12.28_linux_amd64.zip
+
+- Set Up AWS CLI and Ansible (centos7)
+
+$ sudo yum -y install python3-pip
+$ pip3 install ansible --user
+$ pip3 install awscli --user 
+$ sudo yum -y install jq (optional)
+$ mkdir iac-deploy-tf-ansible
+$ wget 
+
+
 
 - Set Up AWS IAM Permissions for Terraform - will need permissions to create, update, and
   delete various AWS resources. We can do this in two ways 1. create a separate IAM user
   with the required permissions 2. create am EC2 (IAMrole) instance profile with required
-  permissions and attach it to EC2. 
-  
-
-
-
-
-
+  permissions and attach it to EC2. I'm choosing relaxed policy this time. 
 
 Step 3: Terraform Infrastructure as Code (IaaC)
 - Understand terraform init, validate, plan and apply
