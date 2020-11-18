@@ -271,6 +271,11 @@ resource "aws_subnet" "subnet_1_oregon" {
 ```
 # Network Set Up part 2: Deploying Multi-Region VPC Peering and setting up the routes so VPC can communicate over the VPC peering connection.
 
+Objective: Deploy VPC Peering Connection
+
+[<img src="https://github.com/cgpeanut/terraform-ansible-aws/blob/main/images/deploy_vpc_peering_connection.png">]
+
+
 ```
 ```
 
