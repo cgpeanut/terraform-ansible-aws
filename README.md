@@ -269,7 +269,7 @@ resource "aws_subnet" "subnet_1_oregon" {
 ##### end of networks.tf #####
 
 ```
-# Network Set Up part 2: Deploying Multi-Region VPC Peering
+# Network Set Up part 2: Deploying Multi-Region VPC Peering and setting up the routes so VPC can communicate over the VPC peering connection.
 
 ```
 ```
