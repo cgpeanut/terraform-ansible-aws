@@ -498,6 +498,9 @@ It can get cumbersome trying to track all the different routing components of a 
 
 Let's go through creating a network setup complete with VPCs, subnets, security groups, internet gateways, and VPC peering in AWS using Terraform. We are expected to have working knowledge of VPC resources and basic network components within AWS.
 
+```
+
+[<img src="https://github.com/cgpeanut/terraform-ansible-aws/blob/main/images/vpc-peering.png">
 
 
 
