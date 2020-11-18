@@ -504,15 +504,14 @@ internet gateways, and VPC peering in AWS using Terraform. We are expected to ha
 knowledge of VPC resources and basic network components within AWS.
 
 ```
-
 [<img src="https://github.com/cgpeanut/terraform-ansible-aws/blob/main/images/vpc-peering.png">
 
 login to EC2 instance control node
 
 $ terraform --version
+
 $ git clone https://github.com/cgpeanut/terraform-ansible-aws.git
 
-```
 ```
 
 
