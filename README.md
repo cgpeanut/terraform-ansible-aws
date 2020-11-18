@@ -49,9 +49,36 @@ Step 3: Terraform Infrastructure as Code (IaaC)
 ```
 ```
 $ terraform init
+
 1. Initializes working directory - downloads and includes all modules and providers (except third party) in Terraform file.
 2. Needs to be run befor deploying infrastructure. - As other stages of Terraform deployment require provider, pluginsm and modules, this command needs to run first!
 3. Syncs config, safe to run - configures backend for storing infrastructure state and does not modify or delete any existing configuration state.
+
+$ terraform fmt (format)
+
+1. Formats template for readability - Makes Terraform templates look stylish and readable.
+2. Helps in keeping code consistent - Keeps the formatting consistent, expecially if teams are collaborating and tracking Terraform code through version control.
+3. Safe to run at any time - Does not modify or add anything to code; only reformats it and rewrites it back to the files.
+
+$ terraform validate
+
+1. validate config files - Checks for syntax mistakes anbd internal consistency (typos and misconfigured resources)
+2. Needs terraform init to be run first - Expects an initialized working directory, therefor the init command should be run before validate can be run.
+3. Safe to run at any time - a use case would be ti run in order to check for issues in TF code before commiting to version control.
+
+$ terraform plan
+
+1. creates execution plan - calculates the delta between required state and current state to create an execution plan.
+2. Fail-safe before actual deployment - A check if te dep[loyment execution plan matches expectation before creating or modifying any actual infrastructure.
+3. Execution plan can be saved using the -out flag - warning sensitive configuration items would also be saved in a file as plaintext.
+
+$ terraform apply
+
+1. 
+
+
+
+
 ```
 ```
 
