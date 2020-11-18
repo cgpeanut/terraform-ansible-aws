@@ -84,7 +84,7 @@ Terraform Backends:
 - By default, state is stored on local disk.
 - Variables cannot be used as input to Terraform block.
 
-## Intructions on how to create an S3 bucket for terraform backend. ##
+## Intructions on how to create an S3 bucket for persisting terraform backend. ##
 
 1. login to terraform control node.
 
@@ -109,6 +109,10 @@ terraform {
 
 ##### end of backend.tf #####
 
+* This will upload the terraform state file into the S3 bucket so everyone can code share! *
+
+$ terraform init
+$ terraform fmt 
 
 
 
