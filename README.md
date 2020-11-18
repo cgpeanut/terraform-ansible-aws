@@ -507,11 +507,13 @@ knowledge of VPC resources and basic network components within AWS.
 
 [<img src="https://github.com/cgpeanut/terraform-ansible-aws/blob/main/images/vpc-peering.png">
 
-1. login to EC2 instance control node
+login to EC2 instance control node
 
 $ terraform --version
-$ git clone http://
+$ git clone https://github.com/cgpeanut/terraform-ansible-aws.git
 
+```
+```
 
 
 
