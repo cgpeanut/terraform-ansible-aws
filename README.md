@@ -127,6 +127,70 @@ The secret sauce behind defining multiple providers is using the parameter calle
 $ cd $HOME/iac-deploy-tf-ansible
 $ vim variables.tf
 
+# Creating terraform variables for two separate regions us-east-1 & us-east-2 #
+
+```
+```
+##### Start of variables.tf #####
+
+variable "profile" {
+  type    = string
+  default = "default"
+}
+
+variable "region-master" {
+  type    = string
+  default = "us-east-1"
+}
+
+variable "region-worker" {
+  type    = string
+  default = "us-west-2"
+}
+
+##### end of variables.tf #####
+```
+```
+
+$ vim providers.tf
+
+```
+```
+##### start of providers.tf #####
+
+provider "aws" {
+  profile = var.profile
+  region  = var.region-master
+  alias   = "region-master"
+}
+
+provider "aws" {
+  profile = var.profile
+  region  = var.region-worker
+  alias   = "region-worker"
+}
+
+##### end of providers.tf #####
+```
+```
+
+$ terraform init 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 - Network Set Up part 1: Deploying VPCs, Internet GWs, and Subnets
 - Network Set Up part 2: Deploying Multi-Region VPC Peering
