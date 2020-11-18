@@ -199,7 +199,7 @@ $ vim networks.tf
 
 #Create VPC in us-east-1
 resource "aws_vpc" "vpc_master" {
-  provider             = aws.region-master
+  provider             = aws.region-master # alias provideri.tf us-east-1
   cidr_block           = "10.0.0.0/16"
   enable_dns_support   = true
   enable_dns_hostnames = true
@@ -212,7 +212,7 @@ resource "aws_vpc" "vpc_master" {
 #Create VPC in us-west-2
 resource "aws_vpc" "vpc_master_oregon" {
   provider             = aws.region-worker
-  cidr_block           = "192.168.0.0/16"
+  cidr_block           = "192.168.0.0/16" # cidr must must have no overlap-vpc peeering 
   enable_dns_support   = true
   enable_dns_hostnames = true
   tags = {
@@ -233,27 +233,28 @@ resource "aws_internet_gateway" "igw-oregon" {
   vpc_id   = aws_vpc.vpc_master_oregon.id
 }
 
-#Get all available AZ's in VPC for master region
+#Get all available AZ's in VPC for master region and pass it to datasource "azs"
 data "aws_availability_zones" "azs" {
   provider = aws.region-master
   state    = "available"
 }
 
-
 #Create subnet # 1 in us-east-1
 resource "aws_subnet" "subnet_1" {
   provider          = aws.region-master
-  availability_zone = element(data.aws_availability_zones.azs.names, 0)
+  availability_zone = element(data.aws_availability_zones.azs.names, 0) # 1st element 
   vpc_id            = aws_vpc.vpc_master.id
   cidr_block        = "10.0.1.0/24"
 }
 
+#Note: the element function takes the list of availability zones by the above data sources
+#call and picks out the 1st element in the lisyt which starts from 0 index [0].
 
 #Create subnet #2  in us-east-1
 resource "aws_subnet" "subnet_2" {
   provider          = aws.region-master
   vpc_id            = aws_vpc.vpc_master.id
-  availability_zone = element(data.aws_availability_zones.azs.names, 1)
+  availability_zone = element(data.aws_availability_zones.azs.names, 1) # 2nd element
   cidr_block        = "10.0.2.0/24"
 }
 
@@ -269,6 +270,9 @@ resource "aws_subnet" "subnet_1_oregon" {
 
 ```
 ```
+
+$ terraform fmt
+$ terraform validate
 
 
 
