@@ -19,8 +19,6 @@ $ ansible --version
 $ aws configure (enter secret and access keys)
 $ aws ec2 describe-instances
 
-```
-```
 - Set Up AWS IAM Permissions for Terraform - will need permissions to create, update, and
   delete various AWS resources. We can do this in two ways 1. create a separate IAM user
   with the required permissions 2. create am EC2 (IAMrole) instance profile with required
