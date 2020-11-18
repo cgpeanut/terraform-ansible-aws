@@ -394,11 +394,12 @@ resource "aws_security_group" "lb-sg" {
   egress {
     from_port   = 0
     to_port     = 0
-    protocol    = "-1"
+    protocol    = "-1" # means all protocol
     cidr_blocks = ["0.0.0.0/0"]
   }
 }
 
+#security_group for our jenkins master
 #Create SG for allowing TCP/8080 from * and TCP/22 from your IP in us-east-1
 resource "aws_security_group" "jenkins-sg" {
   provider    = aws.region-master
@@ -410,7 +411,7 @@ resource "aws_security_group" "jenkins-sg" {
     from_port   = 22
     to_port     = 22
     protocol    = "tcp"
-    cidr_blocks = [var.external_ip]
+    cidr_blocks = [var.external_ip] # referenced in variables.tf file
   }
   ingress {
     description = "allow anyone on port 8080"
