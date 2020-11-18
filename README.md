@@ -181,7 +181,7 @@ Note: checkout .terraform for state and plugins
 ```
 Step 6: Deploy Network Layout 
 
-Network Architectural Diagram [<img src="https://github.com/cgpeanut/terraform-ansible-aws/blob/main/images/Architectural_Diagrams.png">]
+[<img src="https://github.com/cgpeanut/terraform-ansible-aws/blob/main/images/deploy_network_layout.png">]
 Note: must have S3 bucket and multuple providers must be already set via control node. 
 
 # Network Set Up part 1: Deploying VPCs, Internet GWs, and Subnets
