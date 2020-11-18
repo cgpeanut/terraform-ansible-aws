@@ -112,7 +112,7 @@ terraform {
 * Uploads the terraform state file to the AWS S3 bucket once terraform apply is invoked *
 * Vital for code sharing! and the last state of the project is safely secured. *
 
-e terraform init
+$ terraform init
 $ terraform fmt 
 
 ```
@@ -180,12 +180,9 @@ Note: checkout .terraform for state and plugins
 
 # Step 6: Deploy Network Layout 
 ```
-```
+
 [<img src="https://github.com/cgpeanut/terraform-ansible-aws/blob/main/data/terraform_ansible_aws.pdf">]
 
-[https://github.com/cgpeanut/terraform-ansible-aws/blob/main/data/terraform_ansible_aws.pdf]
-
-```
 ```
 Note: must have S3 bucket and multuple providers set. 
 
