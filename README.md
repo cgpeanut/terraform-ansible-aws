@@ -799,7 +799,7 @@ output "PEERING-CONNECTION-ID" {
   value = aws_vpc_peering_connection.useast1-uswest-2.id
 }
 
-###l## end of variables.tf #####
+##### end of variables.tf #####
 
 ```
 ```
@@ -830,7 +830,10 @@ variable "region-worker" {
 ```
 ```
 
+To Validate:
 
+AWS management Console -> search for VPC -> VPC - master-vpc-jenkins is theone we soun up
+check the route: click Description Tab -> Click Route Table (bottom) -> Route
 
 
 
