@@ -78,13 +78,33 @@ $ terraform apply
 2. By default will prompt before deploying
 3. Will display execution plan again
 
-
-
-
 ```
 ```
 
 - Persisting terraform state in S3 Back End
+
+Terraform Backends:
+
+1. Determines how a state is stored.
+2, By default, state is stored on local disk.
+3. Variables cannot be used as input to Terraform block.
+
+
+
+```
+```
+
+
+
+
+
+
+
+
+
+
+
+
 
 - Setting Up Multiple providers in Terraform
 
