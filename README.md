@@ -799,6 +799,8 @@ output "PEERING-CONNECTION-ID" {
   value = aws_vpc_peering_connection.useast1-uswest-2.id
 }
 
+###l## end of variables.tf #####
+
 ```
 ```
 
