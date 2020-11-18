@@ -176,21 +176,13 @@ provider "aws" {
 
 $ terraform init 
 
+Note: checkout .terraform for state and plugins
+```
+```
 
+Step 6: Deploy Network Layout 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+Note: must have S3 bucket and multuple providers set. 
 
 - Network Set Up part 1: Deploying VPCs, Internet GWs, and Subnets
 - Network Set Up part 2: Deploying Multi-Region VPC Peering
