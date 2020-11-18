@@ -469,6 +469,19 @@ resource "aws_security_group" "jenkins-sg-oregon" {
 ```
 $ vim variables.tf
 
+Add these lines:
+```
+
+variable "external_ip" {
+  type = string
+  default = "0.0.0.0/0"
+}
+
+
+
+
+
+
 
 
 Hand-On -> Creating a multi-region network with VPC peering using SGs, IGW and RTs
