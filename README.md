@@ -477,14 +477,29 @@ variable "external_ip" {
   default = "0.0.0.0/0"
 }
 
+```
 
+$ terraform fmt 
+$ terraform validate
+$ terraform plan
+$ terraform apply --auto-approve
 
+$ terraform destroy
 
-
-
-
+```
 
 Hand-On -> Creating a multi-region network with VPC peering using SGs, IGW and RTs
+
+
+
+
+
+
+
+
+```
+
+
 
 - App VM Deployment part 1: Using Data Source (SSM Parameter Store) to fetch AMI IDs
 
