@@ -110,19 +110,15 @@ terraform {
 ##### end of backend.tf #####
 
 * Uploads the terraform state file to the AWS S3 bucket once terraform apply is invoked *
-* Vital for code sharing! *
+* Vital for code sharing! and the last state of the project is safely secured. *
 
 $ terraform init
 $ terraform fmt 
 
+```
+```
 
-
-
-
-
-
-
-- Setting Up Multiple providers in Terraform
+Step 5: Setting Up Multiple providers in Terraform
 
 - Network Set Up part 1: Deploying VPCs, Internet GWs, and Subnets
 - Network Set Up part 2: Deploying Multi-Region VPC Peering
