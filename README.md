@@ -109,7 +109,8 @@ terraform {
 
 ##### end of backend.tf #####
 
-* This will upload the terraform state file into the S3 bucket so everyone can code share! *
+* Uploads the terraform state file to the AWS S3 bucket once terraform apply is invoked *
+* Vital for code sharing! *
 
 $ terraform init
 $ terraform fmt 
