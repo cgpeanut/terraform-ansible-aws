@@ -43,7 +43,13 @@ AWS Management Console -> Roles -> AWS service, select EC2 -> search for: Terraf
 ```
 
 Step 3: Terraform Infrastructure as Code (IaaC)
+
 - Understand terraform init, validate, plan and apply
+
+$ terraform init
+1. Initializes working directory - downloads and includes all modules and providers (except third party) in Terraform file. 
+2. Needs to be run befor deploying infrastructure. - As other stages of Terraform deployment require provider, pluginsm and modules, this command needs to run first!
+
 
 - Persisting terraform state in S3 Back End
 
