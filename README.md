@@ -182,10 +182,7 @@ Note: checkout .terraform for state and plugins
 
 Step 6: Deploy Network Layout 
 
-![arch2](https://user-images.githubusercontent.com/8342133/28283464-6c37d870-6b4b-11e7-9cf0-ac46aed9c594.png)
-
-
-
+[<img src="https://github.com/cgpeanut/burris-mtac30/blob/master/data/burris-tac30-ballistic-CQ.png">]
 
 Note: must have S3 bucket and multuple providers set. 
 
