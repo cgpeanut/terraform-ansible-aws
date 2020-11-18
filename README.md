@@ -180,8 +180,7 @@ Note: checkout .terraform for state and plugins
 
 # Step 6: Deploy Network Layout 
 ```
-
-Network Architectural Diagram [<img src="https://github.com/cgpeanut/terraform-ansible-aws/blob/main/images/terraform_ansible_aws.pdf">]
+Network Architectural Diagram [<img src="https://github.com/cgpeanut/terraform-ansible-aws/blob/main/images/terraform_ansible_aws.png">]
 
 ```
 
