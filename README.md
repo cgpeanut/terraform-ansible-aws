@@ -14,3 +14,16 @@ Step 3: Terraform Infrastructure as Code (IaaC)
 - Network Set Up part 2: Deploying Multi-Region VPC Peering
 - Network Set Up part 3: Deploying Security Groups
 Hand-On -> Creating a multi-region network with VPC peering using SGs, IGW and RTs
+- App VM Deployment part 1: Using Data Source (SSM Parameter Store) to fetch AMI IDs
+
+#Get Linux AMI ID using SSM Parameter endpoint in us-east-1
+data "aws_ssm_parameter" "linuxAmi" {
+  provider = aws.region-master
+  name     = "/aws/service/ami-amazon-linux-latest/amzn2-ami-hvm-x86_64-gp2"
+}
+
+#Get Linux AMI ID using SSM Parameter endpoint in us-west-2
+data "aws_ssm_parameter" "linuxAmiOregon" {
+  provider = aws.region-worker
+  name     = "/aws/service/ami-amazon-linux-latest/amzn2-ami-hvm-x86_64-gp2"
+}
