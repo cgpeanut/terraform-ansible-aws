@@ -80,13 +80,20 @@ Step 4: Persisting terraform state in S3 Back End
 
 Terraform Backends:
 
-1. Determines how a state is stored.
-2, By default, state is stored on local disk.
-3. Variables cannot be used as input to Terraform block.
+- Determines how a state is stored.
+- By default, state is stored on local disk.
+- Variables cannot be used as input to Terraform block.
 
+## Intructions on how to create an S3 bucket for terraform backend. ##
 
-#Set S3 backend for persisting TF state file remotely, ensure bucket already exits
-# And that AWS user being used by TF has read/write perms
+1. login to terraform control node.
+
+$ cd $HOME/iac-deploy-tf-ansible
+$ aws s3api create-bucket --bucket terraformstatebucket041520
+$ vim backend.tf
+
+##### backend.tf #####
+
 terraform {
   required_version = ">=0.12.0"
   required_providers {
@@ -95,17 +102,12 @@ terraform {
   backend "s3" {
     region  = "us-east-1"
     profile = "default"
-    key     = "terraformstatefile"
-    bucket  = "<name-of-already-created-bucket>"
+    key     = "terraformstatefile" # note you created this in the console 
+    bucket  = "terraformstatebucket041520"
   }
 }
 
-```
-```
-
-
-
-
+##### end of backend.tf #####
 
 
 
