@@ -170,7 +170,8 @@ provider "aws" {
   alias   = "region-worker"
 }
 
-##### end of providers.tf #####
+#### end of providers.tf #####
+
 ```
 ```
 
@@ -178,12 +179,16 @@ $ terraform init
 
 Note: checkout .terraform for state and plugins
 
+```
 # Step 6: Deploy Network Layout 
+
 ```
 Network Architectural Diagram [<img src="https://github.com/cgpeanut/terraform-ansible-aws/blob/main/images/Architectural_Diagrams.png">]
 
 Note: must have S3 bucket and multuple providers must be already set via control node. 
-# Network Set Up part 1: Deploying VPCs, Internet GWs, and Subnets
+```
+
+- Network Set Up part 1: Deploying VPCs, Internet GWs, and Subnets
 
 $ cd $HOME/iac-deploy-tf-ansible
 $ cat backend.tf
@@ -268,9 +273,6 @@ resource "aws_subnet" "subnet_1_oregon" {
 
 ```
 ```
-
-$ terraform fmt
-$ terraform validate
 
 
 
