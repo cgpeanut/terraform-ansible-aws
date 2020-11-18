@@ -112,13 +112,21 @@ terraform {
 * Uploads the terraform state file to the AWS S3 bucket once terraform apply is invoked *
 * Vital for code sharing! and the last state of the project is safely secured. *
 
-$ terraform init
+e terraform init
 $ terraform fmt 
 
 ```
 ```
 
 Step 5: Setting Up Multiple providers in Terraform
+
+Terraform Providers - The source code for all terraform resources,  providers carry out interactions with vendor APIs such as AWS, GCP and Azure. They also provide logic for managing, updating and creating resources in Terraform.
+
+The secret sauce behind defining multiple providers is using the parameter called "alias". This is how we can peg down a specific provider to an alias and then invoke the specific provider against a specific resource in our terraform code. Here's how: login control node
+
+$ cd $HOME/iac-deploy-tf-ansible
+$ vim variables.tf
+
 
 - Network Set Up part 1: Deploying VPCs, Internet GWs, and Subnets
 - Network Set Up part 2: Deploying Multi-Region VPC Peering
