@@ -181,7 +181,7 @@ Note: checkout .terraform for state and plugins
 # Step 6: Deploy Network Layout 
 ```
 
-[<img src="https://github.com/cgpeanut/terraform-ansible-aws/blob/main/data/terraform_ansible_aws.pdf">]
+[<img src="https://github.com/cgpeanut/terraform-ansible-aws/blob/main/images/terraform_ansible_aws.pdf">]
 
 ```
 Note: must have S3 bucket and multuple providers set. 
