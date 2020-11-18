@@ -359,11 +359,7 @@ To validate: AWS Management Console -> VPC -> useast1 region (nVa) -> Peering Co
 
 [<img src="https://github.com/cgpeanut/terraform-ansible-aws/blob/main/images/useast1-peering-connection.png">]
 
-
-
-
-
-- Network Set Up part 3: Deploying Security Groups
+# Network Set Up part 3: Deploying Security Groups
 
 Hand-On -> Creating a multi-region network with VPC peering using SGs, IGW and RTs
 
