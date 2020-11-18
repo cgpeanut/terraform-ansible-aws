@@ -275,10 +275,7 @@ Objective: Deploy VPC Peering Connection
 
 [<img src="https://github.com/cgpeanut/terraform-ansible-aws/blob/main/images/deploy_vpc_peering_connection.png">]
 
-
 ```
-```
-
 #Initiate Peering connection request from us-east-1
 resource "aws_vpc_peering_connection" "useast1-uswest2" {
   provider    = aws.region-master
@@ -348,6 +345,8 @@ resource "aws_main_route_table_association" "set-worker-default-rt-assoc" {
   vpc_id         = aws_vpc.vpc_master_oregon.id
   route_table_id = aws_route_table.internet_route_oregon.id
 }
+```
+
 
 
 
