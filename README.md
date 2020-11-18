@@ -12,8 +12,8 @@ $ sudo yum -y install python3-pip
 $ pip3 install ansible --user
 $ pip3 install awscli --user 
 $ sudo yum -y install jq (optional)
-$ mkdir iac-deploy-tf-ansible
-$ wget 
+$ mkdir $HOME/iac-deploy-tf-ansible && cd $HOME/iac-deploy-tf-ansible
+$ wget https://github.com/cgpeanut/terraform-ansible-aws/blob/main/ansible.cfg
 
 
 
