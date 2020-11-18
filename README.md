@@ -31,9 +31,13 @@ $ wget https://github.com/cgpeanut/terraform-ansible-aws/blob/main/data/strict_t
 
 AWS Management Console -> IAM -> Policy -> Create Policy -> paste above -> Review -> Name &Descripttion: TerrafromUserPolicy -> Create policy
 
-- attach the newly created terraform user policy to a IAM user or EC2 role.
+- attach the newly created terraform user policy to a IAM user 1st method.
 
-AWS Management Console -> IAM -> Users -> User Name: terraformuser -> Programmatic Access -> Attach existing Policy Search for: TerraformUserPolicy -> Tag Name:TFPolicy
+AWS Management Console -> IAM -> Users -> User Name: terraformuser -> Programmatic Access -> Attach existing Policy Search for: TerraformUserPolicy -> Tag Name:TFPolicy -> Create User -> Save the credentils securely.
+
+2nd method create an EC2 role.
+
+AWS Management Console -> Roles -> AWS service, select EC2 -> search for: TerraformUserPolicy -> Tag Name: RoleEC2TF -> Name: EC2TFRole Decription: Allows EC2 instances to call AWS services -> Create Role
 
 ```
 ```
